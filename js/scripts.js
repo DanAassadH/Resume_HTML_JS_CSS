@@ -69,24 +69,26 @@ function ValidateFormValues() {
     //  console.log(name + ':' + email + ':' + subject + ':' + message);
 
     if (contactInfo.IsEmpty(name)) {
-        errorArray[counter] = "Please Enetr Your Name";
-        counter++;
-    }
-
-    if (contactInfo.IsEmpty(subject)) {
-        errorArray[counter] = "Please Enter Subject of your Email";
-        counter++;
-    }
-
-    if (contactInfo.IsEmpty(message)) {
-        errorArray[counter] = "Please Enetr a message";
+        errorArray[counter] = "Please Enter Your Name";
         counter++;
     }
 
     if (!contactInfo.ValidEmail()) {
-        errorArray[counter] = "Please Enetr a valid email";
+        errorArray[counter] = "Please Enter valid email";
         counter++;
     }
+
+    if (contactInfo.IsEmpty(subject)) {
+        errorArray[counter] = "Please Enter Subject";
+        counter++;
+    }
+
+    if (contactInfo.IsEmpty(message)) {
+        errorArray[counter] = "Please Enter message";
+        counter++;
+    }
+
+
 
     if (contactInfo.SwearCheck(`${name} ${email} ${subject} ${message}`)) {
         errorArray[counter] = "Please keep the text free from swear words";

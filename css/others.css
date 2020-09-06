@@ -1,0 +1,239 @@
+/*---------  This CSS page contain additional CSS settings for 
+        **   education.html 
+        **   experience.html and 
+        **   contact.html pages */
+
+
+/* ---------------------------------------------------------------
+------------------------------------------------------------------
+------------------- Starting contact.html page -------------------*/
+
+/*-------------------setting form area ---------------*/
+
+.contact-form{
+    padding: 30px 0px 20px 10px;
+}
+
+input[type=text], select {
+    width :100%;
+    padding: 5px 5px;
+    margin: 8px 0;
+    font-size: 14px; 
+    border: 1px solid #052E57;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    width :100%;
+    height: 150px;
+    font-size: 14px;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #052E57;
+    border-radius: 5px;
+    margin: 8px 0;
+    resize: none;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #f07f3d;
+    color: #fff;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #052E57;
+  }
+
+  /*-----------setting error area-----------------*/
+
+.error-list{ 
+  padding-top: 40px; 
+  padding-left: 30px;}
+  
+.error-list ul { 
+  list-style: none; 
+  }
+
+.error-list li{
+    font-size: 14px;
+    color: #cf4848;
+    padding: 19px;
+}
+  
+
+/* --------------------Naming sections of grid ------------------*/
+header { grid-area: header; }
+.rectangle { grid-area: rectangle; }
+nav { grid-area: nav; }
+.contact-form { grid-area: contact; }
+.error-list { grid-area: errors; }
+.footer-navigation { grid-area: links; }
+.social-media { grid-area: social; }
+footer{ grid-area: copyrt; }
+
+/*----------------------------display for mobiles----------------------*/
+.grid-contact {
+  background-color: #C4D0E0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 250px repeat(7,auto);
+  grid-template-areas:
+    "header header"
+    "rectangle rectangle"
+    "nav nav"
+    "contact errors"
+    "contact errors"
+    "social social"
+    "links links"
+    "copyrt copyrt" ;
+}
+
+/* ------------------------Display for Tablets------------------------------*/
+@media screen and ( min-width: 600px ) {
+  .grid-contact { 
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows:  400px repeat(6,auto);
+    grid-template-areas:
+    "header    header    header    header"
+    "rectangle rectangle rectangle rectangle"
+    "nav       nav       nav       nav"
+    "contact   contact   errors    errors"
+    "contact   contact   errors    errors"
+    "links     links     social    social"
+    "links     links     copyrt    copyrt";
+
+  }
+
+    /* better quality image for tablet*/
+  header{
+  background-image: url("../img/tech_1280.jpg");
+  }
+
+  /* Adjust Header Text*/
+  header h1{
+    padding-top:13% ;
+    padding-right: 10%;
+  }
+
+  /*Adjust Nav bar text*/
+  nav a{
+    font-size: 14px;
+  }
+
+  /*Adjust body */
+  .contact-form{
+    padding: 30px 0px 20px 30px;
+}
+
+.error-list{ 
+    padding-top: 40px; 
+    padding-left: 30px;}
+
+.error-list li{
+    font-size: 14px;
+    color: #cf4848;
+    padding: 22px;
+}
+    /*Adjust footer */
+.footer-navigation a ,
+.social-media a{
+font-size: 13px;
+text-decoration: none;}
+
+.footer-navigation 
+{
+padding-left:25px;
+padding-bottom: 20px;
+}
+
+.social-media{
+    padding-left: 0px;
+}
+
+footer p{
+ 
+text-align: right;
+padding-right: 25px; 
+
+}
+
+}/*End @media for tablet*/
+
+
+/* -------------------display for desktop -------------------------------------*/
+@media screen and (min-width: 1024px)
+{
+   
+  .grid-contact{
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  560px repeat(4,auto);
+  grid-template-areas: 
+  "header    header    header    header    header    header"
+  "rectangle rectangle rectangle rectangle rectangle rectangle"
+  "nav       nav       nav       nav       nav       nav"
+  "contact   contact   contact   errors    errors    errors"
+  "links     links     links     social    social    copyrt";
+  }
+  /* high quality image for desktop*/
+  header{
+  background-image: url("../img/tech_1920.jpg");
+  }
+
+   /* Adjust Header Text*/
+   header h1{
+     font-size: 6vw;
+    padding-top:12% ;
+    padding-right: 10%;
+  }
+  
+  header h3{
+    font-size:2.5vw;  
+  }
+
+  /*Adjust Nav bar text*/
+  nav a{
+    font-size: 18px;
+  }
+
+  /*Adjust body */
+  .error-list li{
+    font-size: 15px;
+    color: #cf4848;
+    padding: 23px;
+    padding-left: 60px;
+}
+
+    /*Adjust footer */
+
+.footer-navigation a ,
+.social-media a{
+font-size: 14px;
+}
+
+.footer-navigation 
+{
+padding-left:180px;
+padding-bottom: 20px;
+}
+
+.social-media{
+    padding-left: 50px;
+}
+
+footer p{
+ 
+text-align: right;
+padding-right: 25px; 
+padding-top: 160px;
+}
+
+}/*End @media for desktop*/
+
+

@@ -299,19 +299,14 @@ padding-right: 25px;
   "nav       nav       nav       nav       nav       nav"
   ".         about     about     about     about     ."
   ".         skills    skills    tools     tools     ."
-  ".         links     links     social    social    copyrt";
+  "links     links     links     social    social    copyrt";
   }
   /* high quality image for desktop*/
   header{
   background-image: url("../img/tech_1920.jpg");
   }
 
-  /*making a full block for     ". links links social social    .  "
-                                 ".   .     .      .   .      copyrt";      and give it background color*/
-  .empty{
-  grid-area: 6/1/span 2/span 6;
-  background-color: #052E57;
-  }
+
 
    /* Adjust Header Text*/
    header h1{
@@ -326,7 +321,7 @@ padding-right: 25px;
 
   /*Adjust Nav bar text*/
   nav a{
-    font-size: 16px;
+    font-size: 18px;
   }
 
   /*Adjust body */
@@ -352,7 +347,7 @@ font-size: 14px;
 
 .footer-navigation 
 {
-padding-left:50px;
+padding-left:180px;
 padding-bottom: 20px;
 }
 
