@@ -6,32 +6,175 @@
     margin: 0;
   }
 
-  /* setting page background */
-  body {
-        margin: auto;
-        background: #ffffff;
-        padding: 20px;
+/* setting page background */
+body {
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
 }
+
+/*  --------------  Arrange elements of header  ------------------  */
 
  /*  scalable background image https://www.bitdegree.org/learn/responsive-image#:~:text=Using%20CSS%2C%20you%20can%20set,or%20bigger%20than%20the%20viewport.*/
- 
- 
-header { background-image: url("../img/tech_640.jpg");
-         background-repeat: no-repeat;     
-        background-size: 100% 100%;     
+header {
+  background-image: url("../img/tech_640.jpg");
+  background-repeat: no-repeat;     
+  background-size: 100% 100%;  
+     
 }
 
-nav { background-color: lightsalmon; }
-.about-me { background-color: lightslategray; }
-.skills { background-color: darkgoldenrod; }
-.dev-tools { background-color: darkmagenta; }
-.footer-navigation { background-color: blue; }
-.social-media { background-color: yellow; }
-footer{ background-color: plum; }
+header h1{
+  color:#ffffff;
+  font-size: 7vw;
+  text-align: right;
+  padding-right: 10%;
+  padding-top: 10%;
+ 
+}
 
-/*Naming sections of grid*/
+header h3{
+  color:#ffffff;
+  font-size: 3vw;
+  text-align: right;
+  padding-right: 10%;
+ 
+}
 
+/*https://codepen.io/team/css-tricks/pen/d7be823bca05649502f63fc8490c6d93*/
+header img{
+   height: 10vw;
+  animation: shake 2s infinite;
+  animation-direction: alternate;
+}
+@keyframes shake {
+  0% {
+    transform: skewY(10deg);
+  }
+  100% {
+    transform: skewY(-10deg);
+  }
+}
+
+.rectangle { 
+  background-color: #F16E24;
+  height: 5px;;
+ }
+
+ /* ------------------  Arrange elements of navigation bar ------------------------------- */
+nav {
+background-color:#052E57;
+padding-top: 2.5%;
+padding-bottom: 2.5%;
+
+}
+
+nav a{
+color: #ffffff;
+font-size: 12px;
+text-decoration: none;
+
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+    
+}
+
+
+
+/*-------------- color settings of links----------------------------------------------*/
+
+
+a:hover{
+  color:#f07f3d;
+}
+
+a:active{
+  color:#b0c7e6;
+}
+
+
+/*------------------setting Body---------------*/
+
+.about-me { background-color:#C4D0E0;
+  text-align:justify;
+  padding: 30px 50px ;
+}
+
+.about-me h4{
+  font-size:18px;
+  padding-bottom: 8px;
+}
+
+.about-me p{
+  font-size:15px;
+}
+
+.skills
+{ background-color: #C4D0E0; 
+padding-left: 50px;
+
+}
+
+.skills ul ,
+.dev-tools ul {
+  list-style: none;
+  padding-bottom: 30px;
+
+}
+
+.dev-tools{
+  background-color: #C4D0E0; 
+  text-align: left;
+  padding-left: 50px;
+}
+
+.skills li ,
+.dev-tools li {
+    font-size:14px;
+    padding-top: 10px;
+}
+
+
+
+/* -------------------setting footer area -------------------*/
+
+.footer-navigation ,
+.social-media ,
+footer{ background-color:#052E57;
+  padding-top: 3%; 
+  padding-bottom: 1%;
+padding-left: 50px;}
+
+.footer-navigation ul ,
+.social-media ul { 
+list-style: none;
+}
+
+.footer-navigation li ,
+.social-media li
+{
+  padding: 2%;
+}
+
+.footer-navigation a ,
+.social-media a{
+color: #ffffff;
+font-size: 12px;
+text-decoration: none;}
+
+footer p{
+  color: #ffffff;
+  font-size: xx-small;
+text-align: right;
+padding-right: 10px ;}
+
+
+/* --------------------Naming sections of grid ------------------*/
 header { grid-area: header; }
+.rectangle { grid-area: rectangle; }
 nav { grid-area: nav; }
 .about-me { grid-area: about; }
 .skills { grid-area: skills; }
@@ -40,66 +183,191 @@ nav { grid-area: nav; }
 .social-media { grid-area: social; }
 footer{ grid-area: copyrt; }
 
+/*----------------------------display for mobiles----------------------*/
+.grid {
+  background-color: #C4D0E0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 250px repeat(7,auto);
+  grid-template-areas:
+    "header header"
+    "rectangle rectangle"
+    "nav nav"
+    "about about"
+    "skills tools"
+    "social social"
+    "links links"
+    "copyrt copyrt" ;
 
-/*display website for mobiles*/
-body {
-    display: grid;
+}
 
-    grid-template-columns: 100%;
-
-    grid-template-rows:  repeat(8,auto);
-
+/* ------------------------Display for Tablets------------------------------*/
+@media screen and ( min-width: 600px ) {
+  .grid { 
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows:  400px repeat(7,auto);
     grid-template-areas:
-      "header"
-      "nav"
-      "about"
-      "skills"
-      "tools"
-      "links"
-      "social"
-      "copyrt"
-  
-   ;
-      
+    "header    header    header    header"
+    "rectangle rectangle rectangle rectangle"
+    "nav       nav       nav       nav"
+    ".         about     about     ."
+    ".         skills    skills    ."
+    ".         tools     tools     ."
+    "links     links     social    social"
+    "links     links     copyrt    copyrt";
+
   }
 
-/* Display for Tablets*/
+    /* better quality imagr for tablet*/
+  header{
+  background-image: url("../img/tech_1280.jpg");
+  }
 
-  @media screen and ( min-width: 600px ) {
-    body { 
-        display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows:   repeat(7,auto);
+  /* Adjust Header Text*/
+  header h1{
+    padding-top:13% ;
+    padding-right: 10%;
+  }
 
-      grid-template-areas:
-        "header header header header"
-        "nav nav nav nav"
-        ". about about ."
-        ". skills skills ."
-        ". tools tools ."
-        "links links social social"
-        "links links copyrt copyrt";
-        
-    }
+  /*Adjust Nav bar text*/
+
+  nav a{
+    font-size: 14px;
+  }
+
+  /*Adjust body */
+  .about-me { 
+     padding: 30px 0px ;
+  }
+
+  .about-me p{
+    font-size: 16px;
+  }
+
+  .skills,
+  .dev-tools{ 
+    text-align: center;
+  }
+
+  .skills li ,
+  .dev-tools li {
+    font-size: 15px;
+  }
+
+    /*Adjust footer */
+
+.footer-navigation a ,
+.social-media a{
+font-size: 13px;
+text-decoration: none;}
+
+.footer-navigation 
+{
+padding-left:25px;
+padding-bottom: 20px;
 }
 
-/* display for desktop*/
+.social-media{
+    padding-left: 0px;
+}
+
+footer p{
+ 
+text-align: right;
+padding-right: 25px; 
+
+}
+
+
+}/*End @media for tablet*/
+
+
+/* -------------------display for desktop -------------------------------------*/
 @media screen and (min-width: 1024px)
 {
-    body{
-
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows:   repeat(6,auto);
+  /* change padding of the whole page for desktop*/
+  body{
+    padding: 0.5% 7% 0.5% 7%;
+  }
     
+  .grid{
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows:  560px repeat(5,auto);
+  grid-template-areas: 
+  "header    header    header    header    header    header"
+  "rectangle rectangle rectangle rectangle rectangle rectangle"
+  "nav       nav       nav       nav       nav       nav"
+  ".         about     about     about     about     ."
+  ".         skills    skills    tools     tools     ."
+  ".         links     links     social    social    copyrt";
+  }
+  /* high quality image for desktop*/
+  header{
+  background-image: url("../img/tech_1920.jpg");
+  }
 
-    grid-template-areas: 
-    "header header header header header header"
-    "nav nav nav nav nav nav"
-    ". . about about . ."
-    ". skills skills tools tools ."
-    ". links links social social ."
-    ". . .  . . copyrt";
-    }
+  /*making a full block for     ". links links social social    .  "
+                                 ".   .     .      .   .      copyrt";      and give it background color*/
+  .empty{
+  grid-area: 6/1/span 2/span 6;
+  background-color: #052E57;
+  }
+
+   /* Adjust Header Text*/
+   header h1{
+     font-size: 6vw;
+    padding-top:12% ;
+    padding-right: 10%;
+  }
+  
+  header h3{
+    font-size:2.5vw;  
+  }
+
+  /*Adjust Nav bar text*/
+  nav a{
+    font-size: 16px;
+  }
+
+  /*Adjust body */
+  .about-me { 
+     padding: 30px 0px ;
+  }
+
+  .about-me p{
+    font-size: 16px;
+  }
+
+  .skills,
+  .dev-tools{ 
+    text-align: left;
+  }
+
+    /*Adjust footer */
+
+.footer-navigation a ,
+.social-media a{
+font-size: 14px;
 }
+
+.footer-navigation 
+{
+padding-left:50px;
+padding-bottom: 20px;
+}
+
+.social-media{
+    padding-left: 50px;
+}
+
+footer p{
+ 
+text-align: right;
+padding-right: 25px; 
+padding-top: 120px;
+}
+
+
+}/*End @media for desktop*/
 
 
