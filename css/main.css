@@ -1,18 +1,21 @@
 /*Browser Reset*/
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    padding: 0;
-    margin: 0;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
 
 /*Source https://www.fontsquirrel.com/fonts/Myndraine*/
-  @font-face {
-    font-family: 'Myndraine';
-    src: url( '../fonts/Myndraine/Myndraine.otf' );
-  }
+
+@font-face {
+  font-family: 'Myndraine';
+  src: url('../fonts/Myndraine/Myndraine.otf');
+}
 
 /* setting page background */
+
 body {
   margin: auto;
   background: #ffffff;
@@ -21,9 +24,10 @@ body {
 
 /*
  * Text meant only for screen readers.
- * @link https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/
+ * @link https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screenReaderText/
  */
- .screen-reader-text {
+
+.screenReaderText {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
@@ -38,39 +42,39 @@ body {
 
 /*  --------------  Arrange elements of header  ------------------  */
 
- /*  scalable background image https://www.bitdegree.org/learn/responsive-image#:~:text=Using%20CSS%2C%20you%20can%20set,or%20bigger%20than%20the%20viewport.*/
+/*  scalable background image https://www.bitdegree.org/learn/responsive-image#:~:text=Using%20CSS%2C%20you%20can%20set,or%20bigger%20than%20the%20viewport.*/
+
 header {
   background-image: url("../img/tech_640.jpg");
-  background-repeat: no-repeat;     
-  background-size: 100% 100%;  
-     
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-header h1{
-  color:#ffffff;
+header h1 {
+  color: #ffffff;
   font-family: 'Myndraine';
   font-size: 7vw;
   text-align: right;
   padding-right: 10%;
   padding-top: 10%;
- 
 }
 
-header h2{
-  color:#ffffff;
+header h2 {
+  color: #ffffff;
   font-family: 'Myndraine';
   font-size: 3vw;
   text-align: right;
   padding-right: 10%;
- 
 }
 
-/*https://codepen.io/team/css-tricks/pen/d7be823bca05649502f63fc8490c6d93*/
-header img{
-   height: 10vw;
+/* Code for animated logo at the top https://codepen.io/team/css-tricks/pen/d7be823bca05649502f63fc8490c6d93*/
+
+header img {
+  height: 10vw;
   animation: shake 2s infinite;
   animation-direction: alternate;
 }
+
 @keyframes shake {
   0% {
     transform: skewY(10deg);
@@ -80,170 +84,153 @@ header img{
   }
 }
 
-.rectangle { 
+.rectangle {
   background-color: #F16E24;
-  height: 5px;;
- }
+  height: 5px;
+  ;
+}
 
- /* ------------------  Arrange elements of navigation bar ------------------------------- */
+/* ------------------  Arrange elements of navigation bar ------------------------------- */
+
 nav {
-background-color:#052E57;
-padding-top: 2.5%;
-padding-bottom: 2.5%;
-
+  background-color: #052E57;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
 }
 
-nav a{
-color: #ffffff;
-font-size: 12px;
-text-decoration: none;
-font-family: 'Myndraine';
-
+nav a {
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+  font-family: 'Myndraine';
 }
 
-nav ul{
+nav ul {
   display: flex;
   justify-content: space-evenly;
-     
 }
-
-
 
 /*--------------general settings for elements----------------------------------------------*/
 
-
-a:hover{
-  color:#f07f3d;
+a:hover {
+  color: #f07f3d;
 }
 
-a:active{
-  color:#b0c7e6;
+a:active {
+  color: #b0c7e6;
 }
 
-ul { 
-list-style: none;
+.footerNavigation a:hover, .socialMedia a:hover {
+  color: #f07f3d;
 }
 
-h3{
-  font-size:18px;
+.footerNavigation a:active, .socialMedia a:active {
+  color: #b0c7e6;
+}
+
+ul {
+  list-style: none;
+}
+
+h3 {
+  font-size: 18px;
   font-family: 'Myndraine';
   padding: 8px;
- 
 }
 
-h3{
-  font-size:17px;
+h4 {
+  font-size: 17px;
   font-family: 'Myndraine';
   padding: 8px;
   font-weight: normal;
   text-decoration: underline;
 }
 
-p{
+.socialMedia h4, .footerNavigation h4 {
+  color: #fff;
+}
+
+p {
   font-size: 15px;
   padding: 5px 0px;
 }
 
-
 /*------------------setting Body---------------*/
 
-.about-me, 
-#work,
-.volunteer,
-#education,
-.projects,
-figure p
-{ 
-  text-align:center;
-  padding: 30px 50px ;
-
+.aboutMe, #work, .volunteer, #education, .projects, figure p {
+  text-align: center;
+  padding: 30px 50px;
 }
 
-.skills ul ,
-.dev-tools ul {
+.skills ul, .devTools ul {
   list-style: none;
   padding-bottom: 30px;
-
 }
 
-.skills,
-.dev-tools{
- 
+.skills, .devTools {
   text-align: left;
   padding-left: 30px;
   padding-right: 20px;
-
 }
 
-.skills li ,
-.dev-tools li {
-    font-size:14px;
-    padding-top: 10px;
-    
+.skills li, .devTools li {
+  font-size: 14px;
+  padding-top: 10px;
 }
 
-.skills li:nth-child(even),
-.dev-tools li:nth-child(even) 
-{
-  background-color:#264c72;
+.skills li:nth-child(odd), .devTools li:nth-child(odd) {
+  background-color: #264c72;
   color: #fff;
-  font-style:italic;
+  font-style: italic;
   font-size: 14px;
   padding: 5px;
   font-weight: lighter;
   border-radius: 30px;
- 
 }
 
-.skills li:nth-child(odd),
-.dev-tools li:nth-child(odd) 
-{
-  color:#052E57;
+.skills li:nth-child(even), .devTools li:nth-child(even) {
+  color: #052E57;
   font-size: 16px;
   padding: 5px;
   font-weight: bold;
-
- 
 }
 
-#education{
+#education {
   text-align: left;
 }
 
-#education h3{
-  text-align:center;
+#education h3 {
+  text-align: center;
 }
 
 /* changing text decoration for the institutes*/
-#education p:nth-child(odd)
-{
+
+#education p:nth-child(odd) {
   background-color: #264c72;
   color: #fff;
-  font-style:italic;
+  font-style: italic;
   font-size: 14px;
   padding: 8px;
   font-weight: lighter;
   border-radius: 30px;
 }
 
-#education p:nth-child(even)
-{
+#education p:nth-child(even) {
   padding: 18px;
-
 }
 
 /* Image styling https://www.w3schools.com/css/css3_images.asp*/
-figure img{
-border-radius: 50px;
-padding-bottom: 10px;
-display: block;
-margin-left:auto;
-margin-right:auto;
-width: 70%;
+
+figure img {
+  border-radius: 50px;
+  padding-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
 }
 
-figcaption
-{
+figcaption {
   text-align: center;
   color: #F16E24;
   font-family: 'Myndraine';
@@ -252,278 +239,284 @@ figcaption
   font-size: 20px;
   font-weight: bold;
   text-decoration: underline;
- 
 }
-
 
 /* -------------------setting footer area -------------------*/
 
-.footer-navigation ,
-.social-media ,
-footer{ background-color:#052E57;
-  padding-top: 3%; 
+.footerNavigation, .socialMedia, footer {
+  background-color: #052E57;
+  padding-top: 3%;
   padding-bottom: 1%;
-padding-left: 50px;}
+  padding-left: 50px;
+}
 
-.footer-navigation li ,
-.social-media li
-{
+.footerNavigation li, .socialMedia li {
   padding: 2%;
 }
 
-.footer-navigation a ,
-.social-media a{
-color: #ffffff;
-font-size: 12px;
-text-decoration: none;}
+.footerNavigation a, .socialMedia a {
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+}
 
-footer p{
+footer p {
   color: #ffffff;
   font-size: xx-small;
-text-align: right;
-padding-right: 10px ;}
-
+  text-align: right;
+  padding-right: 10px;
+}
 
 /* --------------------Naming sections of grid ------------------*/
-header { grid-area: header; }
-.rectangle { grid-area: rectangle; }
-nav { grid-area: nav; }
-.about-me { grid-area: about; }
-.skills { grid-area: skills; }
-.dev-tools { grid-area: tools; }
-#work { grid-area: work; }
-.volunteer { grid-area: volunteer; }
-#education { grid-area: education; }
-.projects { grid-area: projects; }
-#curd { grid-area: curd; }
-#list { grid-area: list; }
-#hangman { grid-area: hangman; }
-.footer-navigation { grid-area: links; }
-.social-media { grid-area: social; }
-footer{ grid-area: copyrt; }
+
+header {
+  grid-area: header;
+}
+
+.rectangle {
+  grid-area: rectangle;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.aboutMe {
+  grid-area: about;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.devTools {
+  grid-area: tools;
+}
+
+#work {
+  grid-area: work;
+}
+
+.volunteer {
+  grid-area: volunteer;
+}
+
+#education {
+  grid-area: education;
+}
+
+.projects {
+  grid-area: projects;
+}
+
+#curd {
+  grid-area: curd;
+}
+
+#list {
+  grid-area: list;
+}
+
+#hangman {
+  grid-area: hangman;
+}
+
+.footerNavigation {
+  grid-area: links;
+}
+
+.socialMedia {
+  grid-area: social;
+}
+
+footer {
+  grid-area: copyrt;
+}
 
 /*----------------------------display for mobiles----------------------*/
+
 .grid {
   background-color: #C4D0E0;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 250px repeat(14,auto);
-  grid-template-areas:
-    "header header"
-    "rectangle rectangle"
-    "nav nav"
-    "about about"
-    "skills tools"
-    "work work"
-    "volunteer volunteer"
-    "education education"
-    "projects projects"
-    "curd curd"
-    "list list"
-    "hangman hangman"
-    "social social"
-    "links links"
-    "copyrt copyrt" ;
-
+  grid-template-rows: 250px repeat(14, auto);
+  grid-template-areas: 
+  "header header" 
+  "rectangle rectangle" 
+  "nav nav" 
+  "about about" 
+  "skills tools" 
+  "work work" 
+  "volunteer volunteer" 
+  "education education" 
+  "projects projects" 
+  "curd curd" 
+  "list list" 
+  "hangman hangman" 
+  "social social" 
+  "links links" 
+  "copyrt copyrt";
 }
 
 /* ------------------------Display for Tablets------------------------------*/
-@media screen and ( min-width: 600px ) {
 
-
-  .grid { 
+@media screen and ( min-width: 600px) {
+  .grid {
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows:  400px repeat(13,auto);
-    grid-template-areas:
-    "header    header    header    header"
-    "rectangle rectangle rectangle rectangle"
-    "nav       nav       nav       nav"
-    ".         about     about     ."
-    "skills    skills    tools     tools"
-    ".         work      work      ."
-    ".         volunteer volunteer ."
-    ".         education education ."
-    ".         projects  projects  ."
-    "curd      curd      curd      curd"
-    "list      list      list      list"
-    "hangman   hangman   hangman   hangman"
-    "links     links     social    social"
+    grid-template-rows: 400px repeat(13, auto);
+    grid-template-areas: 
+    "header    header    header    header" 
+    "rectangle rectangle rectangle rectangle" 
+    "nav       nav       nav       nav" 
+    ".         about     about     ." 
+    "skills    skills    tools     tools" 
+    ".         work      work      ." 
+    ".         volunteer volunteer ." 
+    ".         education education ." 
+    ".         projects  projects  ." 
+    "curd      curd      curd      curd" 
+    "list      list      list      list" 
+    "hangman   hangman   hangman   hangman" 
+    "links     links     social    social" 
     "links     links     copyrt    copyrt";
-
   }
-
-    /* better quality image for tablet*/
-  header{
-  background-image: url("../img/tech_1280.jpg");
+  
+  /* better quality image for tablet*/
+  header {
+    background-image: url("../img/tech_1280.jpg");
   }
 
   /* Adjust Header Text*/
-  header h1{
-    padding-top:13% ;
+  header h1 {
+    padding-top: 13%;
     padding-right: 10%;
   }
 
   /*Adjust Nav bar text*/
-
-  nav a{
+  nav a {
     font-size: 15px;
   }
 
   /*Adjust body */
-.about-me, 
-#work,
-.volunteer,
-#education,
-.projects,
-figure p { 
-     padding: 30px 0px ;
-     
+  .aboutMe, #work, .volunteer, #education, .projects, figure p {
+    padding: 30px 0px;
   }
-
-  .about-me p, 
-  #work p,
-  .volunteer p,
-  #education p,
-  .projects p,
-  figure p {
+  .aboutMe p, #work p, .volunteer p, #education p, .projects p, figure p {
     font-size: 16px;
   }
-
-  .skills,
-  .dev-tools{ 
+  .skills, .devTools {
     text-align: center;
   }
-
-  h3{
+  h3 {
     font-size: 20px;
   }
-
-  figure p{
-    padding-left:80px;
-    padding-right:80px;
+  figure p {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  figure img {
+    width: 50%;
   }
 
-
-    /*Adjust footer */
-
-.footer-navigation a ,
-.social-media a{
-font-size: 13px;
-text-decoration: none;}
-
-.footer-navigation 
-{
-padding-left:25px;
-padding-bottom: 20px;
-}
-
-.social-media{
+  /*Adjust footer */
+  .footerNavigation a, .socialMedia a {
+    font-size: 13px;
+    text-decoration: none;
+  }
+  .footerNavigation {
+    padding-left: 25px;
+    padding-bottom: 20px;
+  }
+  .socialMedia {
     padding-left: 0px;
+  }
+  footer p {
+    text-align: right;
+    padding-right: 25px;
+  }
 }
-
-footer p{
- 
-text-align: right;
-padding-right: 25px; 
-
-}
-
-
-}/*End @media for tablet*/
-
+/*End @media for tablet*/
 
 /* -------------------display for desktop -------------------------------------*/
-@media screen and (min-width: 1024px)
-{
+
+@media screen and (min-width: 1024px) {
   /* change padding of the whole page for desktop*/
-  body{
-    padding: 0.5% 10% 0.5% 10%;
+  body {
+    padding: 0.5% 12% 0.5% 12%;
   }
-    
-  .grid{
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows:  500px repeat(9,auto);
-  grid-template-areas: 
-  "header    header    header    header    header    header"
-  "rectangle rectangle rectangle rectangle rectangle rectangle"
-  "nav       nav       nav       nav       nav       nav"
-  ".         .         about     about     .         ."
-  ".         skills    skills    tools     tools     ."
-  "work      work      work      volunteer volunteer volunteer"
-   ".        education education education education ."
-  ".         projects  projects  projects  projects  ."
-  "curd      curd      list      list      hangman   hangman "
-   "links     links     links     social    social    copyrt";
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 500px repeat(9, auto);
+    grid-template-areas: 
+    "header    header    header    header    header    header" 
+    "rectangle rectangle rectangle rectangle rectangle rectangle" 
+    "nav       nav       nav       nav       nav       nav" 
+    ".         .         about     about     .         ." 
+    ".         skills    skills    tools     tools     ." 
+    "work      work      work      volunteer volunteer volunteer" 
+    ".        education education education education ." 
+    ".         projects  projects  projects  projects  ." 
+    "curd      curd      list      list      hangman   hangman " 
+    "links     links     links     social    social    copyrt";
   }
   /* high quality image for desktop*/
-  header{
-  background-image: url("../img/tech_1920.jpg");
+  header {
+    background-image: url("../img/tech_1920.jpg");
   }
 
-
-
-   /* Adjust Header Text*/
-   header h1{
-     font-size: 5vw;
-    padding-top:12% ;
+  /* Adjust Header Text*/
+  header h1 {
+    font-size: 5vw;
+    padding-top: 12%;
     padding-right: 10%;
   }
-  
-  header h2{
-    font-size:2.2vw;  
+  header h2 {
+    font-size: 2.2vw;
   }
-
   h3 {
-    font-size:25px;
+    font-size: 25px;
   }
 
   /*Adjust Nav bar text*/
-  nav a{
+  nav a {
     font-size: 20px;
   }
 
   /*Adjust body */
-  .about-me { 
-     padding: 30px 0px ;
+  .aboutMe {
+    padding: 30px 0px;
   }
-
-
-  #work{
+  #work {
     padding-right: 40px;
     padding-left: 90px;
-  } 
-  .volunteer{
+  }
+  .volunteer {
     padding-right: 90px;
     padding-left: 40px;
   }
+  figure img {
+    height: 200px;
+    width: 70%
+  }
 
-
-
-    /*Adjust footer */
-
-.footer-navigation a ,
-.social-media a{
-font-size: 14px;
-}
-
-.footer-navigation 
-{
-padding-left:180px;
-padding-bottom: 20px;
-}
-
-.social-media{
+  /*Adjust footer */
+  .footerNavigation a, .socialMedia a {
+    font-size: 14px;
+  }
+  .footerNavigation {
+    padding-left: 180px;
+    padding-bottom: 20px;
+  }
+  .socialMedia {
     padding-left: 50px;
+  }
+  footer p {
+    text-align: right;
+    padding-right: 25px;
+  }
+  footer p:nth-child(1) {
+    padding-top: 130px;
+  }
 }
 
-footer p{
- 
-text-align: right;
-padding-right: 25px; 
-padding-top: 120px;
-}
-
-
-}/*End @media for desktop*/
-
-
+/*End @media for desktop*/

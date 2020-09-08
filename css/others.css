@@ -1,155 +1,182 @@
 /*---------  This CSS page contain additional CSS settings for 
         **   contact.html page */
 
-
-/* ---------------------------------------------------------------
-------------------------------------------------------------------
-------------------- Starting contact.html page -------------------*/
-
 /*-------------------setting form area ---------------*/
 
-.contact-form{
-    padding: 30px 0px 20px 10px;
+.contactForm {
+  padding: 30px 0px 20px 10px;
+}
+
+.contactForm h3 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.errorList h3 {
+  visibility: hidden;
+  padding-bottom: 20px;
 }
 
 input[type=text], select {
-    width :100%;
-    padding: 5px 5px;
-    margin: 8px 0;
-    font-size: 14px; 
-    border: 1px solid #052E57;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  textarea {
-    width :100%;
-    height: 150px;
-    font-size: 14px;
-    padding: 5px 0px;
-    box-sizing: border-box;
-    border: 1px solid #052E57;
-    border-radius: 5px;
-    margin: 8px 0;
-    resize: none;
-  }
-
-  input[type=submit] {
-    width: 100%;
-    background-color: #f07f3d;
-    color: #fff;
-    padding: 10px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #052E57;
-  }
-
-  /*----------------setting error area----------------------------*/
-
-.error-list{ 
-  padding-top: 40px; 
-  padding-left: 30px;}
-  
-.error-list ul { 
-  list-style: none; 
-  }
-
-.error-list li{
-    font-size: 14px;
-    color: #cf4848;
-    padding: 19px;
+  width: 100%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  font-size: 14px;
+  border: 1px solid #052E57;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
-  
+
+textarea {
+  width: 100%;
+  height: 150px;
+  font-size: 14px;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  border: 1px solid #052E57;
+  border-radius: 5px;
+  margin: 8px 0;
+  resize: none;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #f07f3d;
+  color: #fff;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #052E57;
+}
+
+/*----------------setting error area----------------------------*/
+
+.errorList {
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 16px;
+  color: #052E57;
+}
+
+.errorList ul {
+  list-style: none;
+}
+
+.errorList li {
+  font-size: 14px;
+  color: #cf4848;
+  padding: 19px;
+}
 
 /* --------------------Naming sections of grid ------------------*/
-header { grid-area: header; }
-.rectangle { grid-area: rectangle; }
-nav { grid-area: nav; }
-.contact-form { grid-area: contact; }
-.error-list { grid-area: errors; }
-.footer-navigation { grid-area: links; }
-.social-media { grid-area: social; }
-footer{ grid-area: copyrt; }
+
+header {
+  grid-area: header;
+}
+
+.rectangle {
+  grid-area: rectangle;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.contactForm {
+  grid-area: contact;
+}
+
+.errorList {
+  grid-area: errors;
+}
+
+.footerNavigation {
+  grid-area: links;
+}
+
+.socialMedia {
+  grid-area: social;
+}
+
+footer {
+  grid-area: copyrt;
+}
 
 /*----------------------------display for mobiles----------------------*/
-.grid-contact {
+
+.gridContact {
   background-color: #C4D0E0;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 250px repeat(7,auto);
-  grid-template-areas:
-    "header header"
-    "rectangle rectangle"
-    "nav nav"
-    "contact errors"
-    "contact errors"
-    "social social"
-    "links links"
-    "copyrt copyrt" ;
+  grid-template-rows: 250px repeat(7, auto);
+  grid-template-areas: 
+  "header header" 
+  "rectangle rectangle" 
+  "nav nav" 
+  "contact errors" 
+  "contact errors" 
+  "social social" 
+  "links links" 
+  "copyrt copyrt";
 }
 
 /* ------------------------Display for Tablets------------------------------*/
-@media screen and ( min-width: 600px ) {
-  .grid-contact { 
+
+@media screen and ( min-width: 600px) {
+  .gridContact {
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows:  400px repeat(6,auto);
-    grid-template-areas:
-    "header    header    header    header"
-    "rectangle rectangle rectangle rectangle"
-    "nav       nav       nav       nav"
-    "contact   contact   errors    errors"
-    "contact   contact   errors    errors"
-    "links     links     social    social"
+    grid-template-rows: 400px repeat(6, auto);
+    grid-template-areas: 
+    "header    header    header    header" 
+    "rectangle rectangle rectangle rectangle" 
+    "nav       nav       nav       nav" 
+    "contact   contact   errors    errors" 
+    "contact   contact   errors    errors" 
+    "links     links     social    social" 
     "links     links     copyrt    copyrt";
-
   }
-
-    /*Adjust body */
-.contact-form{
+  /*Adjust body */
+  .contactForm {
     padding: 30px 0px 20px 30px;
-}
-
-.error-list{ 
-    padding-top: 40px; 
-    padding-left: 30px;}
-
-.error-list li{
+  }
+  .errorList {
+    padding-top: 40px;
+    padding-left: 30px;
+  }
+  .errorList li {
     font-size: 14px;
     color: #cf4848;
     padding: 22px;
+  }
 }
-}/*End @media for tablet*/
 
+/*End @media for tablet*/
 
 /* ---------------------display for desktop -------------------------------------*/
-@media screen and (min-width: 1024px)
-{
-   
-  .grid-contact{
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows:  560px repeat(4,auto);
-  grid-template-areas: 
-  "header    header    header    header    header    header"
-  "rectangle rectangle rectangle rectangle rectangle rectangle"
-  "nav       nav       nav       nav       nav       nav"
-  "contact   contact   contact   errors    errors    errors"
-  "links     links     links     social    social    copyrt";
+
+@media screen and (min-width: 1024px) {
+  .gridContact {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 500px repeat(4, auto);
+    grid-template-areas: 
+    "header    header    header    header    header    header" 
+    "rectangle rectangle rectangle rectangle rectangle rectangle" 
+    "nav       nav       nav       nav       nav       nav" 
+    "contact   contact   contact   errors    errors    errors" 
+    "links     links     links     social    social    copyrt";
   }
- 
   /*Adjust body */
-  .error-list li{
+  .errorList li {
     font-size: 15px;
     color: #cf4848;
     padding: 23px;
     padding-left: 60px;
+  }
 }
 
- 
-}/*End @media for desktop*/
-
-
+/*End @media for desktop*/
